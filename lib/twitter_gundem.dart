@@ -25,7 +25,7 @@ class _MyWidgetState extends State<MyWidget> {
       children: <Widget>[
         Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.grey),
+              border: Border(bottom: BorderSide(color: Colors.grey)),
             ),
             child: TabBarWidget()),
         Column(

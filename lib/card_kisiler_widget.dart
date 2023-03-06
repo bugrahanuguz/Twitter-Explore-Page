@@ -21,7 +21,7 @@ class _CardKisilerWidgetState extends State<CardKisilerWidget> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only(left: 100, top: 10, bottom: 0),
+              margin: const EdgeInsets.only(left: 100, top: 10, bottom: 0),
               width: 10,
               height: 10,
               child: Icon(
@@ -31,31 +31,39 @@ class _CardKisilerWidgetState extends State<CardKisilerWidget> {
               ),
             ),
             Container(
-              padding: EdgeInsets.all(15),
-              child: SizedBox(
-                child: Icon(
-                  Icons.account_circle,
-                  size: 80,
+              padding: const EdgeInsets.all(15),
+              child: ClipOval(
+                child: SizedBox.fromSize(
+                  size: Size.fromRadius(40),
+                  child: Image.asset(
+                    'assets/profile.jpeg',
+                    fit: BoxFit.cover,
+                    width: 80,
+                    height: 80,
+                  ), //Icon(
+                  //   Icons.account_circle,
+                  //   size: 80,
+                  // ),
                 ),
               ),
             ),
-            Text(
+            const Text(
               "Buğrahan Uğuz",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
-            Text(
+            const Text(
               "@bugrahanuguz",
               style: TextStyle(fontSize: 16),
             ),
             Container(
               width: 150,
               height: 35,
-              margin: EdgeInsets.only(top: 45),
+              margin: const EdgeInsets.only(top: 45),
               decoration: BoxDecoration(
                   color: Colors.black, borderRadius: BorderRadius.circular(35)),
               child: TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "Takip et",
                   style: TextStyle(color: Colors.white),
                 ),

@@ -17,17 +17,17 @@ class _CardWidgetState extends State<CardWidget> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 381,
-      height: 270,
+      width: MediaQuery.of(context).size.width * 0.95,
+      height: MediaQuery.of(context).size.height * 0.35,
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            CardKisilerWidget(),
-            CardKisilerWidget(),
-            CardKisilerWidget(),
-            CardKisilerWidget(),
-            CardKisilerWidget(),
+            const CardKisilerWidget(),
+            const CardKisilerWidget(),
+            const CardKisilerWidget(),
+            const CardKisilerWidget(),
+            const CardKisilerWidget(),
           ],
         ),
       ),
