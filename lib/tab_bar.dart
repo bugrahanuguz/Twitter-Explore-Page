@@ -11,10 +11,23 @@ class TabBarWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          IconButton(onPressed: () {}, icon: Image.asset('assets/profile.jpeg')
-              //Icon(Icons.account_circle),
-              //iconSize: 30,
+          GestureDetector(
+            onTap: () {},
+            child: Container(
+              margin: EdgeInsets.only(left: 10),
+              child: ClipOval(
+                child: SizedBox.fromSize(
+                  size: Size.fromRadius(18),
+                  child: Image.asset(
+                    'assets/profile.jpeg',
+                  ),
+                ),
               ),
+            ),
+          ),
+          //Icon(Icons.account_circle),
+          //iconSize: 30,
+
           Flexible(
             flex: 1,
             child: Container(
