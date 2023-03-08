@@ -1,17 +1,12 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:flutter_widget/gundem_widget.dart';
-import 'package:flutter_widget/tab_bar.dart';
+import 'package:flutter_widget/explore_page/gundem_widget.dart';
+import 'package:flutter_widget/explore_page/tab_bar.dart';
 
-import 'card_widget.dart';
+import 'explore_page/card_widget.dart';
 import 'nav_bar_widget.dart';
 
 class MyWidget extends StatefulWidget {
-  const MyWidget({super.key, required String title});
+  const MyWidget({super.key});
 
   @override
   State<MyWidget> createState() => _MyWidgetState();
@@ -86,14 +81,6 @@ class _MyWidgetState extends State<MyWidget> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.add),
-      ),
-      bottomNavigationBar: CustomNavBar(
-        pageIndex: pageIndex,
-        onTap: (int value) {
-          setState(() {
-            pageIndex = value;
-          });
-        },
       ),
     );
   }

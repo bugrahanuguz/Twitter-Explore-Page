@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_widget/widgets/pp_button.dart';
 
 class TabBarWidget extends StatelessWidget {
   const TabBarWidget({super.key});
@@ -11,23 +12,9 @@ class TabBarWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          GestureDetector(
-            onTap: () {},
-            child: Container(
-              margin: EdgeInsets.only(left: 10),
-              child: ClipOval(
-                child: SizedBox.fromSize(
-                  size: Size.fromRadius(18),
-                  child: Image.asset(
-                    'assets/profile.jpeg',
-                  ),
-                ),
-              ),
-            ),
-          ),
+          MyPpButon(),
           //Icon(Icons.account_circle),
           //iconSize: 30,
-
           Flexible(
             flex: 1,
             child: Container(
